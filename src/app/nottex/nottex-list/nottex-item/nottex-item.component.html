@@ -1,0 +1,33 @@
+<mat-card class="nottex-card">
+    <mat-card-title-group>
+        <mat-card-title>
+            {{ nottex.title }}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{ nottex.dateCreated.toDateString() }}
+        </mat-card-subtitle>
+    </mat-card-title-group>
+
+    <mat-card-content>
+        {{ nottex.text }}
+    </mat-card-content>
+    
+    <mat-card-actions>
+        <button 
+            mat-icon-button 
+            color="primary" 
+            matTooltip="Edit nottex" 
+            arial-label="Edit nottex"
+            >
+            <mat-icon aria-hidden="false" aria-label="Edit icon">create</mat-icon>
+        </button>
+        <button 
+            mat-icon-button 
+            color="warn" 
+            matTooltip="Delete nottex" 
+            arial-label="Delete nottex"
+            >
+            <mat-icon aria-hidden="false" aria-label="Delete icon">delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>
