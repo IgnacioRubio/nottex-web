@@ -1,7 +1,7 @@
 export interface Nottex {
-  id: Number,
+  id?: Number,
   title: string,
-  color: string,
+  color?: string,
   text: string,
   dateCreated: Date
 }

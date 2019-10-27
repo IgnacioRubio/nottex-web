@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // angular material
@@ -12,19 +13,23 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 
 // nottex modules
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './header/header.component';
 
+// components
 import { NottexComponent } from './nottex/nottex.component';
 import { NottexListComponent } from './nottex/nottex-list/nottex-list.component';
 import { NottexItemComponent } from './nottex/nottex-list/nottex-item/nottex-item.component';
-import { NottexEditComponent } from './nottex/nottex-edit/nottex-edit.component';
-import { NottexAddComponent } from './nottex/nottex-add/nottex-add.component';
+import { NottexFormComponent } from './nottex/nottex-form/nottex-form.component';
+import { NottexFormEditComponent } from './nottex/nottex-form-edit/nottex-form-edit.component';
 
-
+// services
+import { NottexService } from './services/nottex.service';
+import { CommunicationService } from './services/communication.service';
 
 @NgModule({
   declarations: [
@@ -33,10 +38,11 @@ import { NottexAddComponent } from './nottex/nottex-add/nottex-add.component';
     NottexComponent,
     NottexListComponent,
     NottexItemComponent,
-    NottexEditComponent,
-    NottexAddComponent
+    NottexFormComponent,
+    NottexFormEditComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -47,9 +53,17 @@ import { NottexAddComponent } from './nottex/nottex-add/nottex-add.component';
     MatTooltipModule,
     MatListModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ],
-  providers: [],
+  entryComponents: [
+    NottexFormComponent,
+    NottexFormEditComponent
+  ],
+  providers: [
+    NottexService,
+    CommunicationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

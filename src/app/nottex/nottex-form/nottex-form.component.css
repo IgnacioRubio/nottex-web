@@ -1,0 +1,19 @@
+.header-dialog {
+  background-color: #3F51B5;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  margin: -24px;
+  margin-bottom: 25px;
+}
+
+.mat-form-wrapper {
+  display: inline;
+}
+
+.mat-dialog-buttons {
+  position: relative;
+  width: 160px;
+  left: 400px;
+  top: 135px;
+}

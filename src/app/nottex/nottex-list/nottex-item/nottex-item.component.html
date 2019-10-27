@@ -18,6 +18,7 @@
             color="primary" 
             matTooltip="Edit nottex" 
             arial-label="Edit nottex"
+            (click)="onEdit(nottex)"
             >
             <mat-icon aria-hidden="false" aria-label="Edit icon">create</mat-icon>
         </button>
@@ -26,6 +27,7 @@
             color="warn" 
             matTooltip="Delete nottex" 
             arial-label="Delete nottex"
+            (click)="onDelete(nottex.id)"
             >
             <mat-icon aria-hidden="false" aria-label="Delete icon">delete</mat-icon>
         </button>
